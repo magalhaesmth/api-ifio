@@ -1,5 +1,5 @@
 {
-  "name": "ifip-api-2022",
+  "name": "ifio-api-2022",
   "version": "1.0.0",
   "description": "Projeto para fins didáticos",
   "main": "index.js",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/terenciani/ifio-api-2022#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "nodemon": "^2.0.16"
   }
