@@ -1,6 +1,9 @@
 const express = require("express");
 const cors = require("cors");
+const { json } = require("express");
 const porta = process.env.PORT || 3000;
+
+var contador = 1;
 
 class App {
     static async init() {
@@ -15,6 +18,19 @@ class App {
                 description: "Projeto para fins didáticos",
                 author: "Marcelo F. Terenciani"
             })
+        })
+
+        app.get("/ping", (req, res)=>{
+            res.json({"Resposta":"pong"})
+        })
+
+        app.get("/contador", (req, res)=>{
+            res.json({"contador": contador})
+        })
+
+        app.get("/incremento", (req, res)=>{
+            contador ++;
+            res.json({"contador": contador})
         })
 
         app.listen(porta, () => {
