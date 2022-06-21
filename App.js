@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { json } = require("express");
+const CounterRoute = require("./routes/CounterRoute")
 const porta = process.env.PORT || 3000;
 
 var contador = 1;
@@ -36,6 +37,7 @@ class App {
         app.listen(porta, () => {
             console.log(`Servidor inicializado na porta: ${porta}`)
         })
+        new CounterRoute(app)
     }
 }
 App.init();
