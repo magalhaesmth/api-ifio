@@ -6,6 +6,32 @@ POST http://localhost:3000/user HTTP/1.1
 content-type: application/json
 
 {
-    "email": "test@test.com",
-    "senha" : "minhasenha"
+    "name": "Admin",
+    "lastname": "IFPR",
+    "email": "admin@admin.com",
+    "password": "password"
+}
+
+###
+PUT http://localhost:3000/user HTTP/1.1
+content-type: application/json
+
+{
+    "id_user": "1656977307860",
+    "name": "Admin Atualizado",
+    "lastname": "IFPR",
+    "email": "admin@admin.com",
+    "password": "password"
+}
+
+###
+DELETE  http://localhost:3000/user HTTP/1.1
+content-type: application/json
+
+{
+    "id_user": "1656977406623",
+    "name": "Admin Atualizado",
+    "lastname": "IFPR",
+    "email": "admin@admin.com",
+    "password": "password"
 }
