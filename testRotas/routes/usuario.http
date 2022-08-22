@@ -1,0 +1,33 @@
+GET http://localhost:3000/usuarios
+
+###
+
+POST http://localhost:3000/usuarios HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Admin",
+    "sobrenome": "IFPR",
+    "email": "admin@admin.com",
+    "senha": "password"
+}
+
+###
+PUT http://localhost:3000/usuarios HTTP/1.1
+content-type: application/json
+
+{
+    "_id": "6303f93406a4c75edfacfb95",
+    "nome": "Admin Atualizado 2",
+    "email": "admin@admin.com",
+    "senha": "password",
+    "__v": 0
+}
+
+###
+DELETE  http://localhost:3000/usuarios HTTP/1.1
+content-type: application/json
+
+{
+    "_id": "6303f91306a4c75edfacfb93"
+}
